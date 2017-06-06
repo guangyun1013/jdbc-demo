@@ -4,8 +4,11 @@
 而这些线程的context classloader是webapp classloader，如果webapp停止的时候这些线程没有被正确结束，就
 会有指向webapp classloader的引用存在导致webapp classloader无法被回收，进而造成内存泄露。
 更多资料请参考：
+
 https://wiki.apache.org/tomcat/MemoryLeakProtection
+
 https://tomcat.apache.org/tomcat-8.0-doc/config/context.html clearReferencesStopThreads配置项
+
 org.apache.catalina.loader.WebappClassLoaderBase源码
 
 # 如何解决
